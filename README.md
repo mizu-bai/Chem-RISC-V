@@ -1,8 +1,8 @@
 # Chem-RISC-V
 
-Porting Computational Chemistry and Molecular Dynamics Softwares to RISC-V Platforms
+Porting Computational Chemistry, Molecular Dynamics, and Chemoinformatics Softwares to RISC-V Platforms
 
-## Basic Libraries
+## Math Libraries
 
 - Netlib BLAS, CBLAS, & LAPACK
 
