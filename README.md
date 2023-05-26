@@ -1,4 +1,4 @@
-# Chem-RISC-V
+# Chem RISC-V
 
 Porting Computational Chemistry, Molecular Dynamics, and Chemoinformatics Softwares to RISC-V Platforms
 
