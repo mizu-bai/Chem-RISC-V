@@ -17,12 +17,13 @@ The manual of _Polyrate_ - version 17-C is licensed under CC-BY-4.0.
 ## Prerequests
 
 - csh
+- make
 - GNU Compilers
 
 If not installed, install them via apt.
 
 ```sh
-$ ubuntu@ubuntu:~$ sudo apt install csh gcc g++ gfortran -y
+$ ubuntu@ubuntu:~$ sudo apt install csh make gcc g++ gfortran -y
 ```
 
 ## Installation
