@@ -91,7 +91,7 @@ $ gfortran -std=legacy -fno-automatic -static -Ofast venus96.f -o venus96
 /usr/bin/ld: (.text._gfortrani_get_fpu_trap_exceptions+0x4): warning: fegetexcept is not implemented and will always fail
 ```
 
-I came up with this issue in 2023.05.27, the same time when I wrote these words. Okay, they are just **WARNING**, and the statically linked executable files seem to work fine. I shared this issue with my friends. This issue does not exist on x86-64 platform, and I recommand to compile venus without the `static` option.
+I came up with this issue in 2023.05.27, the same time when I wrote these words. Okay, they are just **WARNING**s, and the statically linked executable files seem to work fine. I shared this issue with my friends. This issue does not exist on x86-64 platform, and I recommand to compile venus without the `static` option.
 
 ## Results
 
