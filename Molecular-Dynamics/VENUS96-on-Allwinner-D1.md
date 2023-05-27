@@ -39,9 +39,9 @@ venus96.f:(.text+0x51c0a): undefined reference to `date_'
 collect2: error: ld returned 1 exit status
 ```
 
-Open the file `venus96.f`, and search by the keywords `gdate`, the first matched result should be like this.
+Open the file `venus96.f`, and search by the keyword `gdate`, the first matched result should be like this.
 
-```fortran
+```fortran77
 359  C
 360  C         THE FOLLOWING LINES ARE FOR WRITING THE DATE & TIME
 361  C         IN THE OUTPUT, RIGHT AFTER THE TITLE. THIS, OF COURSE,
@@ -59,9 +59,9 @@ Open the file `venus96.f`, and search by the keywords `gdate`, the first matched
 373        WRITE(6,802)ADATE
 ```
 
-It is clear that the subroutine `FDATA` is for UNIX-Supported systems while subroutine `GDATA` is for UNICOS-Supported systems. Next, continue to find out if subroutine `GDATA` is invoked in other place and its definition. The definition of `GDATA` is at the end of this file, and just comment out it with a lot of "C" characters.
+It is clear that the subroutine `FDATA` is for UNIX-Supported systems while subroutine `GDATA` is for UNICOS-Supported systems. Next, continue to find out if subroutine `GDATA` is invoked in other places and locate its definition. The definition of `GDATA` is at the end of this file, and just comment out it with a lot of "C" characters.
 
-```fortran
+```fortran77
 13486  C
 13487  C         GET CURRENT TIME AND DATE
 13488  C         (CRAY-UNICOS SYSTEM WITH CFT77 COMPILER).
@@ -91,7 +91,7 @@ $ gfortran -std=legacy -fno-automatic -static -Ofast venus96.f -o venus96
 /usr/bin/ld: (.text._gfortrani_get_fpu_trap_exceptions+0x4): warning: fegetexcept is not implemented and will always fail
 ```
 
-I came up with this issue in 2023.05.27, the same time when I wrote these words. Okay, they are just **WARNING**s, and the statically linked executable files seem to work fine. I shared this issue with my friends. This issue does not exist on x86-64 platform, and I recommand to compile venus without the `static` option.
+I came up with this issue on May 27, 2023, the same time when I wrote this article. Okay, they are just **WARNING**s, and the statically linked executable files seem to work fine. I shared this issue with my friends. This issue does not exist on x86-64 platform, and I recommand to compile VENUS96 without the `static` option.
 
 ## Results
 
