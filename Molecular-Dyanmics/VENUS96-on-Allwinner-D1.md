@@ -59,7 +59,7 @@ Open the file `venus96.f`, and search by the keywords `gdate`, the first matched
 373        WRITE(6,802)ADATE
 ```
 
-It is clear that the subroutine `FDATA` is for UNIX-Supported systems while subroutine `GDATA` is for UNICOS-Supported systems. Next, continue to find out if subroutine `GDATA` is invoked in other place and its definition. The definition of `GDATA` is at the end of this file, and just commit with a lot of "C".
+It is clear that the subroutine `FDATA` is for UNIX-Supported systems while subroutine `GDATA` is for UNICOS-Supported systems. Next, continue to find out if subroutine `GDATA` is invoked in other place and its definition. The definition of `GDATA` is at the end of this file, and just comment out it with a lot of "C" characters.
 
 ```fortran
 13486  C
@@ -74,7 +74,7 @@ It is clear that the subroutine `FDATA` is for UNIX-Supported systems while subr
 13495  C      END
 ```
 
-By the way, I have tried `ifort` and `ifx` from Intel oneAPI and `pgfortran` (which is an alias of `nvfortran`) from NVIDIA HPC SDK, only `ifort` and `ifx` support subroutine `DATE` and `CLOCL`. After commit this subroutine, the file `venus96.f` can be compiled successfully only **without** `-static` option.
+By the way, I have tried `ifort` and `ifx` from Intel oneAPI and `pgfortran` (which is an alias of `nvfortran`) from NVIDIA HPC SDK, only `ifort` and `ifx` support subroutine `DATE` and `CLOCK`. After commenting out subroutine `GDATE`, the file `venus96.f` can be compiled successfully only **without** `-static` option.
 
 Even VENUS96 is recommanded to be statically linked, but if compling with this command below,
 
@@ -91,7 +91,7 @@ $ gfortran -std=legacy -fno-automatic -static -Ofast venus96.f -o venus96
 /usr/bin/ld: (.text._gfortrani_get_fpu_trap_exceptions+0x4): warning: fegetexcept is not implemented and will always fail
 ```
 
-I came up with this issue in 2023.05.27, the same time when I wrote these words. Okay, it is just **WARNING**, and the statically linked executable files seem to work fine. I shared this issue to my friends, and they had no idea. This issue does not exist on x86-64 platform, and I recommand to compile venus without the `static` option.
+I came up with this issue in 2023.05.27, the same time when I wrote these words. Okay, they are just **WARNING**, and the statically linked executable files seem to work fine. I shared this issue with my friends. This issue does not exist on x86-64 platform, and I recommand to compile venus without the `static` option.
 
 ## Results
 
