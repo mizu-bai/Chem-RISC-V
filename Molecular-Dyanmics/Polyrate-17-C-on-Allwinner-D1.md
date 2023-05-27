@@ -2,11 +2,11 @@
 
 ## Introduction
 
-_Polyrate 17-C_ is a suite of computer programs for the calculation of chemical reaction rates of polyatomic species (including atoms and diatoms as special cases) by variational transition state theory (VTST); conventional transition state theory is also supported. _Polyrate 17-C_ (called _Polyrate_ for short) consists of the main program, called Polyrate, and a set of utility codes.
+> _Polyrate 17-C_ is a suite of computer programs for the calculation of chemical reaction rates of polyatomic species (including atoms and diatoms as special cases) by variational transition state theory (VTST); conventional transition state theory is also supported. _Polyrate 17-C_ (called _Polyrate_ for short) consists of the main program, called Polyrate, and a set of utility codes.
 
-_Polyrate_ - version 17-C is licensed under the Apache License, Version 2.0.
+> _Polyrate_ - version 17-C is licensed under the Apache License, Version 2.0.
 
-The manual of _Polyrate_ - version 17-C is licensed under CC-BY-4.0.
+> The manual of _Polyrate_ - version 17-C is licensed under CC-BY-4.0.
 
 ## Platform
 
@@ -18,7 +18,7 @@ The manual of _Polyrate_ - version 17-C is licensed under CC-BY-4.0.
 
 - csh
 - make
-- GNU Compilers
+- GNU Compilers, including gcc, g++, and gfortran
 
 If not installed, install them via apt.
 
