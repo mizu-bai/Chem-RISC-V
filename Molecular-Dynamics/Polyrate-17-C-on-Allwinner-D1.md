@@ -33,13 +33,13 @@ First, download _Polyrate 17-C_ from its release site: https://comp.chem.umn.edu
 Since _Polyrate_ will create 2 files at one's home directory named `.poly_path` and `.poly_ver` during the installation, it is recommanded to remove these files.
 
 ```sh
-$ ubuntu@ubuntu:~$ rm .poly_path .poly_ver
+ubuntu@ubuntu:~$ rm .poly_path .poly_ver
 ```
 
 Then decompress _Polyrate_ package. Once finished, a directory named `polyrate17` can be found.
 
 ```sh
-$ ubuntu@ubuntu:~$ tar zxvf polyrate17C_20190728_withSSQRRK_20190110.tar.gz
+ubuntu@ubuntu:~$ tar zxvf polyrate17C_20190728_withSSQRRK_20190110.tar.gz
 ```
 
 Enter `polyrate17`, and run the script `configure`. When asked to choose between RP-VTST or VRC-VTST, type `RP` and return.
