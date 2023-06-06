@@ -19,7 +19,7 @@
 
 ## Installation
 
-Obtain source code of PIMD from website https://ccse.jaea.go.jp/software/PIMD/index.en.html, upload the archived file to Mango PI MQ Pro and then decompress it.
+Obtain source code of PIMD from website https://ccse.jaea.go.jp/software/PIMD/index.en.html, upload the archived file to Mango PI MQ Pro, and then decompress it.
 
 ```sh
 ubuntu@ubuntu-mq-pro:~$ mkdir pimd.2.5.2

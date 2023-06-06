@@ -2,9 +2,9 @@
 
 Porting Computational Chemistry, Molecular Dynamics, and Chemoinformatics Softwares to RISC-V Platforms
 
-## Math Libraries
+## Computational Chemistry
 
-- Netlib BLAS, CBLAS, & LAPACK
+- [xtb 6.5.1, Allwinner D1](https://github.com/mizu-bai/Chem-RISC-V/blob/main/Computational-Chemistry/xtb-on-Allwinner-D1.md)
 
 ## Molecular Dynamics
 
